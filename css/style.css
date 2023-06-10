@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+:root {
+  --Mobile: 375px;
+  --Desktop: 1440px;
+
+  /*Colors*/
+
+  /* Primary*/
+
+  --Blue: hsl(223, 87%, 63%);
+  --BlueHover: hsla(223, 87%, 63%, 0.438);
+
+  /* Secondary */
+
+  --PaleBlue: hsl(223, 100%, 88%);
+  --LightRed: hsl(354, 100%, 66%);
+
+  /* Neutral */
+
+  --Gray: hsl(0, 0%, 59%);
+  --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+
+html,
+body,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+}
+body {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 span {
+  color: var(--Gray);
+  font-weight: 300;
+  font-size: 2.2rem;
+}
+@media screen and (max-width: 764px) {
+  header img {
+    width: 80%;
+  }
+
+  h1,
+  h1 span {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 0.7rem;
+  }
+}
+
+h2 {
+  font-weight: 300;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 2rem 0 3rem 0;
+}
+@media screen and (max-width: 764px) {
+  form {
+    flex-direction: column;
+  }
+  form button {
+    float: none;
+    width: 85%;
+    height: 2.5rem;
+    margin-top: 0.7rem;
+    margin-right: 1rem;
+  }
+  form input {
+    float: none;
+    width: 85%;
+    height: 2.5rem;
+    margin-top: 0.7rem;
+    margin-left: 2rem;
+  }
+}
+
+form button {
+  float: right;
+
+  border-radius: 2rem;
+  padding: 0.7rem 2.2rem;
+  background-color: var(--Blue);
+  color: white;
+  border: none;
+  font-size: 0.7rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+}
+form button:hover {
+  background-color: var(--BlueHover);
+}
+form input {
+  float: left;
+  border-radius: 2rem;
+  padding: 0.5rem 2.2rem;
+  border: 0.1px solid var(--Gray);
+}
+
+form input::placeholder {
+  font-size: 0.8rem;
+  color: var(--Gray);
+  text-transform: capitalize;
+}
+.img-dashboard {
+  max-width: 50%;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 764px) {
+  .img-dashboard {
+    max-width: 75%;
+  }
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.icons ion-icon {
+  color: var(--Blue);
+  border: 0.5px solid var(--Gray);
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 0.8rem;
+}
+.icons ion-icon:hover {
+  background-color: var(--Blue);
+  color: aliceblue;
+  cursor: pointer;
+}
+.error-input {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 0.7rem;
+
+  text-align: center;
+}
+
+footer p {
+  color: var(--Gray);
+  font-size: 0.5rem;
+}
